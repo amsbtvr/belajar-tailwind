@@ -5,11 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Tailwind</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <Style type="text/tailwindcss">
+        * {
+            border: 1px solid red;
+        }
+    </Style>
 </head>
 <body>
-    <h1 class="text-5xl font-bold text-green-600">Hello Gais</h1>
-    <p class="m-3 bg-yellow-200"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vitae fugit consectetur itaque. Porro harum modi expedita sapiente, officia facilis quod laborum omnis voluptates necessitatibus ab! Nulla laborum nemo autem.</p>
-
+    <h1>Hello Gais</h1>
+    
+    <section>
+        <h2>Spacing</h2>
+        <div class="mr-8">Margin</div>
+    </section>
 </body>
 </html>
