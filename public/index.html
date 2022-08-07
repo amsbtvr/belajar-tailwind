@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,59 @@
     <title>Test Tailwind</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- <link rel="stylesheet" href="css/style.css" /> -->
-    <Style type="text/tailwindcss">
-        * {
-            border: 1px solid red;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    spacing: {
+                        '13': '3.25rem',
+                    }
+                }
+            }
         }
+    </script>
+    <Style type="text/tailwindcss">
+
     </Style>
 </head>
+
 <body>
-    <h1>Hello Gais</h1>
-    
-    <section>
-        <h2>Spacing</h2>
-        <div class="mr-8">Margin</div>
+    <h1 class="text-6xl font-bold text-center my-10">Try TailwindCSS</h1>
+
+    <section class="mb-10 bg-indigo-200">
+        <h2 class="text-3xl text-center font-bold">Spacing</h2>
+        <div class="m-13 bg-red-200">Margin</div>
+        <div class="p-8 bg-red-200">Padding</div>
+    </section>
+
+    <section class="mb-10 bg-green-200 font-bold">
+        <h2 class="text-3xl text-center">Sizing</h2>
+        <div class="w-32 h-32 bg-yellow-200">Kotak 1</div>
+    </section>
+
+    <section class="mb-96 font-sans max-w-3xl mx-auto">
+        <h2 class="mb-2 text-4xl font-bold">Typography TailwindCSS</h2>
+        <div class="mb-4 text-lg text-gray-500">
+            By Kyo, 07 August 2022
+        </div>
+        <p class="mb-4">
+            Lorem ipsum dolor sit amet, <a href="#" class="underline font-semibold text-blue-500">consectetur</a> adipisicing elit. Molestiae reprehenderit beatae aliquid,
+            consequatur praesentium quidem repellendus harum porro quod maiores perferendis. Tenetur quas debitis soluta
+            vitae facilis. Maiores vero, temporibus iure consequatur enim delectus perferendis laboriosam quibusdam,
+            impedit nesciunt tenetur assumenda est laudantium corporis officia voluptatem harum nam exercitationem
+            ratione!
+        </p>
+
+        <blockquote class="mb-4 italic font-thin text-xl">
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dolore? Perferendis placeat atque quam vel
+            dolor nulla eaque dicta ipsam."
+        </blockquote>
+
+        <p class="mb-4">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia corporis tempora voluptatum aliquam sint, qui
+            cum vero quis, quasi id assumenda error fugiat rerum porro fugit repellendus corrupti ducimus quae.
+        </p>
     </section>
 </body>
+
 </html>
