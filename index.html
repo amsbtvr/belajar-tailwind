@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Tailwind</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="./public/css/style.css" />
     <script>
         tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    spacing: {
-                        '13': '3.25rem',
-                    }
-                }
-            }
+            // darkMode: 'class',
+            // theme: {
+            //     extend: {
+            //         spacing: {
+            //             '13': '3.25rem',
+            //         }
+            //     }
+            // }
         }
     </script>
     <Style type="text/tailwindcss">
-        #toggle:checked ~ label div.toggle-circle {
+        /* #toggle:checked ~ label div.toggle-circle {
             @apply translate-x-3;
-        }
+        } */
     </Style>
 </head>
 
@@ -94,7 +94,7 @@
 
     <div class="flex justify-center">
         <span class="text-sm text-slate-500 mr-2">Light</span>
-        <input type="checkbox" id="toggle" class="hidden"/>
+        <input type="checkbox" id="toggle" class="hidden" />
         <label for="toggle">
             <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
                 <div class="w-4 h-4 bg-white rounded-full toggle-circle">
@@ -105,37 +105,173 @@
         <span class="text-sm text-slate-500 ml-2">Dark</span>
     </div>
 
-    <button class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold block mx-auto hover:bg-sky-600 active:bg-sky-700 focus:ring-sky-300 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100">
+    <button
+        class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold block mx-auto hover:bg-sky-600 active:bg-sky-700 focus:ring-sky-300 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100">
         Simpan
     </button>
 
-    <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-serif hover:bg-sky-500 group dark:hover:bg-slate-300">
-        <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800">My Card</h5>
-        <p class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900 first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:group-hover:text-slate-800">
+    <div
+        class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-serif hover:bg-sky-500 group dark:hover:bg-slate-300">
+        <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800">My Card
+        </h5>
+        <p
+            class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900 first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:group-hover:text-slate-800">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, temporibus excepturi. Quia
             consectetur a quis deleniti cupiditate et eos exercitationem possimus dolorem laboriosam, quam aliquid earum
             voluptates inventore, itaque eveniet!</p>
     </div>
 
-    <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-serif hover:bg-sky-500 group">
+    <div
+        class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-serif hover:bg-sky-500 group">
         <form action="">
             <label for="email">
-                <span class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 after:ml-1">Email</span>
+                <span
+                    class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 after:ml-1">Email</span>
                 <input type="email" placeholder="Masukkan Email.."
                     class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer">
                 <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">Invalid email</p>
-                </label>
+            </label>
         </form>
     </div>
 
+    <hr class="my-20" />
+    <div
+        class="w-40 h-40 bg-sky-500 mx-auto rounded-lg shadow-lg hover:scale-100 hover:rotate-90 hover:bg-pink-500 transition origin-top-left">
+    </div>
+
+    <div class="w-40 h-40 bg-pink-500 mx-auto mt-20 group">
+        <div
+            class="w-full h-full bg-sky-500 rounded-lg shadow-lg group-hover:rotate-180 origin-top-left transition duration-1000 delay-1000">
+        </div>
+    </div>
+
+    <div class="w-40 h-40 bg-pink-500 mx-auto rounded-lg shadow-lg mt-20 animate-spin "></div>
+
+    <hr class="my-20 border-t-4" />
+    <div class="container px-5 mx-auto">
+        <div class="border rounded-lg shadow-lg p-10  relative ">
+            <div class="h-10 w-10 bg-slate-300 rounded-full flex fixed bottom-5 right-5 cursor-pointer"><a href="#"
+                    class="text-xl m-auto">⬆️</a></div>
+            <img src="./public/img/motor.png" alt="laptop" width="150" class="float-left mr-3" />
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi facilis, provident aliquid veritatis quia
+                ab quam, at voluptas dolor unde soluta eius inventore eaque consectetur nihil ipsum. Laudantium
+                molestias neque debitis ratione, tenetur, eius repellat aut sint dolore inventore, perferendis quasi
+                laboriosam. Expedita repudiandae blanditiis deleniti voluptatum aspernatur odit inventore? Corrupti quas
+                porro accusamus, fuga labore iusto obcaecati magni mollitia quibusdam minima repellat maxime deleniti
+                nostrum ipsa? Exercitationem pariatur aliquam officiis, maxime reprehenderit laborum debitis accusantium
+                eligendi inventore cumque repellendus tempora ducimus, eaque architecto rem magni modi. Odit voluptates
+                consequuntur enim qui asperiores quam error sapiente. Sapiente deserunt totam dolor?</p>
+        </div>
+    </div>
+
+    <div class="container mx-auto border rounded-lg shadow-lg p-10 mt-20 columns-3">
+        <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4" />
+        <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4" />
+        <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4" />
+        <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4" />
+        <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4" />
+        <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4" />
+    </div>
+
+    <hr class="my-24 border-t-4" />
+
+    <div class="container px-6 font-serif max-w-md mx-auto sm:max-w-xl md:max-2-5xl lg:flex lg:max-w-full lg:p-0">
+        <div class="lg:p-12 lg:flex-1">
+            <h3 class="text-4xl font-bold text-slate-800">K<span class="text-sky-500 sm:text-5xl md:text-6xl">yo</span>
+            </h3>
+            <img src="./public/img/motor.png" alt="Bike" class="mt-4 rounded-xl shadow-xl sm:mt-6 sm:h-64 sm:w-full sm:object-cover sm:object-center lg:hidden" />
+            <h2 class="mt-6 text-2xl font-semibold text-slate-800 sm:mt-8 sm:text-4xl">Mari Ngeteh</h2>
+            <p class="mt-2 text-slate-600 sm:mt-4 sm:text-xl">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quod, quaerat quam fugiat debitis dignissimos natus provident corporis atque iure, qui perspiciatis
+                inventore repellat sequi accusantium modi, ipsa aperiam. Dolorem, quos?</p>
+            <div class="mt-4 sm:mt-6">
+                <a href="#" class="inline-block px-5 py-3 bg-red-600 text-white rounded-lg shadow-lg uppercase font-semibold tracking-wider text-sm">Subscribe</a>
+            </div>
+        </div>
+        <div class="hidden lg:flex lg:w-1/2">
+            <img src="./public/img/motor.png" alt="Bike" class="object-cover rounded-l-3xl" />
+        </div>
+    </div>
+
+    <h2 class="mt-24 mb-10 text-center font-bold text-3xl text-slate-700">Gallery</h2>
+    <div class="container mx-auto px-6 font-mono sm:flex sm:flex-wrap sm:gap-6 sm:justify-evenly ">
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:w-64 sm:mb-0 md:w-80 lg:w-72">
+            <img src="https://source.unsplash.com/600x400" alt="ImageCapt" class="w-full"/>
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 text-slate-700">Image Title</div>
+                <p class="text-sm text-slate-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, rerum.</p>
+            </div>
+        </div>
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:w-64 sm:mb-0 md:w-80 lg:w-72">
+            <img src="https://source.unsplash.com/600x400" alt="ImageCapt" class="w-full"/>
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 text-slate-700">Image Title</div>
+                <p class="text-sm text-slate-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, rerum.</p>
+            </div>
+        </div>
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:w-64 sm:mb-0 md:w-80 lg:w-72">
+            <img src="https://source.unsplash.com/600x400" alt="ImageCapt" class="w-full"/>
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 text-slate-700">Image Title</div>
+                <p class="text-sm text-slate-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, rerum.</p>
+            </div>
+        </div>
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:w-64 sm:mb-0 md:w-80 lg:w-72">
+            <img src="https://source.unsplash.com/600x400" alt="ImageCapt" class="w-full"/>
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 text-slate-700">Image Title</div>
+                <p class="text-sm text-slate-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, rerum.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-64 p-2 font-sans grid grid-cols-2 gap-2 md:grid-cols-4 md:p-4">
+        <h2 class="text-xl h-15 font-semibold text-slate-700 md:col-start-4 md:row-start-2 md:flex"><span class="self-center">Welcome</span></h2>
+        <div class="h-15 text-xl font-bold text-slate-700 md:col-start-2 md:row-start-2 md:flex"><span class="self-end">@Kyo</span></div>
+
+
+        <div class="group grid-card">
+            <div class="grid-card-img"></div>
+        </div>
+        <div class="group grid-card md:col-start-3">
+            <div class="grid-card-img"></div>
+        </div>
+        <div class="group grid-card">
+            <div class="grid-card-img"></div>
+        </div>
+        <div class="group grid-card">
+            <div class="grid-card-img"></div>
+        </div>
+        <div class="group grid-card">
+            <div class="grid-card-img"></div>
+        </div>
+        <div class="group grid-card md:col-start-2">
+            <div class="grid-card-img"></div>
+        </div>
+        <div class="group grid-card md:col-start-4">
+            <div class="grid-card-img"></div>
+        </div>
+        <div class="group grid-card">
+            <div class="grid-card-img"></div>
+        </div>
+        <div class="group grid-card md:col-start-3">
+            <div class="grid-card-img"></div>
+        </div>
+        <div class="group grid-card md:col-start-3">
+            <div class="grid-card-img"></div>
+        </div>
+    </div>
+
+    <h1>Hi</h1>  
+
     <div class="mb-96"></div>
     <script>
-        const checkbox = document.querySelector ('#toggle');
-        const html = document.querySelector ('html');
+        const checkbox = document.querySelector('#toggle');
+        const html = document.querySelector('html');
 
-        checkbox.addEventListener('click', function(){
+        checkbox.addEventListener('click', function () {
             checkbox.checked ? html.classList.add
-            ('dark') : html.classList.remove('dark');
+                ('dark') : html.classList.remove('dark');
         })
     </script>
 </body>
